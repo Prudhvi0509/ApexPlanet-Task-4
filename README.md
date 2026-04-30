@@ -29,4 +29,5 @@ It features multiple sections, including:
 - Clean, easy-to-use UI.
 ## 📸 Product Images:
 Place product images in the format : cloth1.png, electronic2.png, food1.png etc 
+
 Webpage Link : https://prudhvi0509.github.io/ApexPlanet-Task-4/
