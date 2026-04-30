@@ -1,0 +1,146 @@
+/* --- Global Theme Variables --- */
+:root {
+  /* This gradient matches the second image perfectly */
+  --apex-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-soft: #f0f2f5; 
+  --white: #ffffff;
+}
+
+/* --- General Styles --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-soft); /* Soft light background for contrast */
+  color: #333;
+}
+
+header {
+  background: var(--apex-gradient); /* Updated to Gradient */
+  padding: 1.2rem;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Modern shadow depth */
+}
+
+header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 0.8rem;
+}
+
+nav a {
+  margin: 0 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+main {
+  padding-top: 160px; /* Increased space for the new header size */
+}
+
+/* --- Section Styling --- */
+.content-section {
+  display: none;
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: auto;
+  background: var(--white);
+  border-radius: 15px; /* Smoother rounded corners */
+  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.1); /* Subtle purple-tinted shadow */
+}
+
+.content-section.active {
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  color: #4a4a4a; /* Professional charcoal for text */
+}
+
+/* --- Product Catalog --- */
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.product-card {
+  border: none; /* Removed the old thin border */
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift effect from second image */
+}
+
+/* --- Gradient Buttons --- */
+#todoForm button,
+.product-card button,
+button[type="submit"] {
+  padding: 0.8rem 1.5rem;
+  background: var(--apex-gradient); /* Gradient Buttons */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+#todoForm button:hover,
+.product-card button:hover {
+  filter: brightness(1.1);
+}
+
+/* --- To-Do List Styling --- */
+#todoList li {
+  background-color: #fdfbff;
+  padding: 1rem;
+  border-left: 5px solid #764ba2; /* Accent strip to match gradient */
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--apex-gradient); /* Matching Footer Gradient */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 600px) {
+  #productGrid {
+    grid-template-columns: 1fr;
+  }
+}
